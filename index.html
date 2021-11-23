@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div id="anim-content">
+            <div class="compoleft">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="letter"><h1>H</h1></div>
+            </div>
+            <div class="compocenter">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="letter"><h1>E</h1></div>
+            </div>
+            <div class="compocenter">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="letter"><h1>L</h1></div>
+            </div>
+            <div class="compocenter">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="letter"><h1>L</h1></div>
+            </div>
+            <div class="compocenter">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="letter"><h1>O</h1></div>
+            </div>
+            <div class="compocenter">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="letter"><h1>W</h1></div>
+            </div>
+            <div class="compocenter">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="letter"><h1>O</h1></div>
+            </div>
+            <div class="compocenter">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="letter"><h1>R</h1></div>
+            </div>
+            <div class="compocenter">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="letter"><h1>L</h1></div>
+            </div>
+            <div class="comporight">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="letter"><h1>D</h1></div>
+            </div>
+        </div>
+    </center>
+    <style>
+
+        body {
+            background-color: cadetblue;
+        }
+
+        #anim-content {
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            color: black;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+           background-color: black;
+           border-radius: 50%;
+        }
+
+        .line {
+            background-color: black;
+            border: 1px solid black;
+            width: 1px;
+            height: 100px;
+        }
+
+        .letter {
+            position: absolute;
+            top: 100px;
+        }
+
+         .compoleft {
+            animation: swingleft linear infinite;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            
+        }
+
+        .comporight {
+            animation: swingright linear infinite;
+            animation-duration: 2s;
+            animation-delay: 2s;
+        }
+
+
+        @keyframes swingleft {
+            0%{
+                transform-origin: top;
+                transform: rotate(0deg);
+            }
+            35% {
+                transform-origin: top;
+                transform: rotate(35deg);
+            }
+            55% {
+                transform-origin: top;
+                transform: rotate(0deg);
+            }
+            
+        }
+
+        @keyframes swingright {
+            55%{
+                transform-origin: top;
+                transform: rotate(0deg);
+            }
+            75% {
+                transform-origin: top;
+                transform: rotate(-35deg);
+            }
+            100% {
+                transform-origin: top;
+                transform: rotate(0deg);
+            }
+            
+        }
+    </style>
+</body>
+</html>

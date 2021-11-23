@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div id="anim-content">
+            <div class="boule"></div>
+            <div class="texte"><H1>D A B</H1></div>
+        </div>
+    </center>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        #anim-content {
+            position: absolute;
+            top: 40%;
+            left: 45%;
+
+        }
+
+        .boule {
+            position: absolute;
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            z-index: 0;
+            bottom: 25px;
+            animation: swing 2s infinite;
+            animation-direction: alternate;
+        }
+
+        .texte {
+            font-size: xx-large;
+            color: white;
+            position: relative;
+            z-index: 2;
+            mix-blend-mode: difference;
+        }
+
+        @keyframes swing {
+            from {
+                transform: translateX(90px);
+            }
+            to {
+                transform: translateX(-15px);
+            }
+        }
+    </style>
+</body>
+</html>
